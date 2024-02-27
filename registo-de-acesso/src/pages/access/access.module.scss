@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+:global(input) {
+  width: 30rem;
+  padding: .8rem 1.2rem;
+  border: .2rem solid #118d7d;
+  border-radius: .5rem;
+}
