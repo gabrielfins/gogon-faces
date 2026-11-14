@@ -45,7 +45,7 @@ pip install opencv-contrib-python numpy pyfirmata pyserial firebase-admin
 ```
 
 1. Grave o sketch `StandardFirmata` no Arduino e ajuste a porta serial (por padrão `COM3`) em `main.py`.
-2. Substitua `firebase-secret.json` pela chave de serviço **do seu próprio projeto Firebase** (o arquivo do repositório é apenas um placeholder) e ajuste a URL do banco em `firebase.py`.
+2. Copie `firebase-secret.example.json` para `firebase-secret.json` e substitua o conteúdo pela chave de serviço **do seu próprio projeto Firebase** (o arquivo real é ignorado pelo Git via `.gitignore`), e ajuste a URL do banco em `firebase.py`.
 3. Cadastre um rosto, treine e execute:
    ```bash
    python cadastro.py
@@ -61,6 +61,6 @@ npm install
 npm run dev
 ```
 
-Configure as credenciais do seu projeto Firebase em `src/services/firebase-service.ts`.
+Crie um arquivo `.env` em `registo-de-acesso/` com as variáveis `VITE_API_KEY`, `VITE_PROJECT_ID` e as demais lidas em `src/services/firebase-service.ts` (o `.env` é ignorado pelo Git).
 
-> **Segurança:** nunca faça commit de chaves reais do Firebase. Mantenha o `firebase-secret.json` verdadeiro fora do controle de versão.
+> **Segurança:** o `.gitignore` já impede o commit de `firebase-secret.json` e de arquivos `.env`. Nunca faça commit de chaves reais do Firebase; se uma chave vazar, revogue-a no console do Firebase.

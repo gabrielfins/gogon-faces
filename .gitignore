@@ -1,0 +1,19 @@
+# Firebase credentials — never commit real keys.
+# Copy controle-acesso-facial/firebase-secret.example.json to firebase-secret.json and fill it in.
+firebase-secret.json
+**/firebase-secret.json
+*-firebase-adminsdk-*.json
+serviceAccountKey.json
+
+# Environment files (the web dashboard reads its Firebase config from VITE_* variables)
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
